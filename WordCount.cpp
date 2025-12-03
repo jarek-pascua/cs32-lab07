@@ -130,7 +130,7 @@ void WordCount::dumpWordsSortedByWord(std::ostream &out) const {
 	}
 	sort(words.begin(), words.end());
 	for (const std::string &w : words){
-	out << w << " " << getWordCount(w) << endl;
+	out << w << ", " << getWordCount(w) << endl;
 	}
 }
 
@@ -148,7 +148,7 @@ void WordCount::dumpWordsSortedByOccurence(std::ostream &out) const {
 		return a.second < b.second; //sort by count and return
 	});
 	for (const auto &pair : count){
-		out << pair.first << " " << pair.second << endl;
+		out << pair.first << ", " << pair.second << endl;
 	}
 }
 

@@ -128,7 +128,7 @@ void WordCount::dumpWordsSortedByWord(std::ostream &out) const {
 			words.push_back(table[i][j].first);
 		}
 	}
-	sort(words.begin(), words.end());
+	sort(words.begin(), words.end(), std::greater<string>());
 	for (const std::string &w : words){
 	out << w << "," << getWordCount(w) << endl;
 	}
